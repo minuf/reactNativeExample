@@ -1,22 +1,20 @@
 import React from 'react';
 import {Text, StyleSheet, Button} from 'react-native';
+import AppContainer from '../containers/AppContainer';
 
-const ProductDetail = ({navigation}) => {
+const ProductDetail = ({route, navigation}) => {
+  const {itemId} = route.params;
   return (
     <>
-      {/* <Text style={styles.header}>HomeScreen</Text> */}
-      <Button
-        title="Go To Product list"
-        onPress={() => navigation.navigate('ProductList')}
-      />
+      <AppContainer>
+        <Button
+          title="Go To Product list"
+          onPress={() => navigation.navigate('ProductList')}
+        />
+        <Text>itemId: {JSON.stringify(itemId)}</Text>
+      </AppContainer>
     </>
   );
 };
-
-const styles = StyleSheet.create({
-  header: {
-    fontSize: 32,
-  },
-});
 
 export default ProductDetail;
