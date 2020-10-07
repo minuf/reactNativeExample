@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "title": "Conga 5490",
+    "price": "579,00",
+    "oldPrice": "998,33",
+    "discount": "42",
+    "imageUri": "https://www.storececotec.com/8952-home_default/conga-5490.jpg"
+  },
+  {
+    "id": "2",
+    "title": "Conga 990 Vital",
+    "price": "148,00",
+    "oldPrice": "315,00",
+    "discount": "53",
+    "imageUri": "https://www.storececotec.com/7073-home_default/conga-990-vital.jpg"
+  },
+  {
+    "id": "3",
+    "title": "Conga Serie 1090 + WinDroid 870 Connected",
+    "price": "289,00",
+    "oldPrice": "481,67",
+    "discount": "40",
+    "imageUri": "https://www.storececotec.com/9627-home_default/conga-1090-windroid-870-connected.jpg"
+  }
+]

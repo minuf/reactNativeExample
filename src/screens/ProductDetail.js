@@ -3,7 +3,7 @@ import {Text, StyleSheet, Button} from 'react-native';
 import AppContainer from '../containers/AppContainer';
 
 const ProductDetail = ({route, navigation}) => {
-  const {itemId} = route.params;
+  const {item} = route.params;
   return (
     <>
       <AppContainer>
@@ -11,7 +11,8 @@ const ProductDetail = ({route, navigation}) => {
           title="Go To Product list"
           onPress={() => navigation.navigate('ProductList')}
         />
-        <Text>itemId: {JSON.stringify(itemId)}</Text>
+        <Text>itemId: {item.id}</Text>
+        <Text>name: {item.title}</Text>
       </AppContainer>
     </>
   );

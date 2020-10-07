@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     flex: 1,
     resizeMode: 'cover',
-    // justifyContent: 'center',
+    justifyContent: 'center',
   },
 });
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import {FlatList, SafeAreaView, StatusBar, StyleSheet} from 'react-native';
+import {FlatList, SafeAreaView, StyleSheet} from 'react-native';
 
 const MList = ({data, renderItem}) => {
   return (
@@ -16,12 +16,7 @@ const MList = ({data, renderItem}) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: StatusBar.currentHeight || 0,
-  },
-  item: {
-    padding: 20,
-    marginVertical: 8,
-    marginHorizontal: 16,
+    // marginTop: StatusBar.currentHeight || 0,
   },
   title: {
     fontSize: 32,
