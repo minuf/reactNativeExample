@@ -5,7 +5,12 @@
     "price": "579,00",
     "oldPrice": "998,33",
     "discount": "42",
-    "imageUri": "https://www.storececotec.com/8952-home_default/conga-5490.jpg"
+    "shortDescription": "Robot aspirador con mapeo láser",
+    "stock": 849,
+    "imageUri": "https://www.storececotec.com/8952-home_default/conga-5490.jpg",
+    "description": "Robot aspirador de Cecotec con tecnología láser, friega, aspira y barre a la vez. Máxima potencia con tecnología Cy-Clean. 10.000 Pa. Cepillo patentado Jalisco. Room Plan. APP. Cepillo especial mascotas. Compatible 5 GHz. Mando a distancia.",
+    "description2": "Robot aspirador con mapeo láser profesional 4 en 1: barre, aspira, pasa la mopa y friega el suelo de forma simultánea gracias a su tanque mixto para sólidos y líquidos. Limpia la totalidad de la superficie recorrida de forma eficiente, ordenada e inteligente con Wi-Fi y App.\nTecnología ciclónica: Los mayores avances en aspiración aplicados para aumentar la potencia de succión, alargando la vida útil.\n10.000 Pa: La mayor potencia de succión jamás vista.\nGracias al innovador sistema Room Plan podrás gestionar hasta 50 planes de limpieza, seleccionando las estancias y habitaciones de tus  viviendas, para poder limpiar el espacio seleccionado cuando tú lo desees.",
+    "composition": "Robot aspirador\nCepillo multifunción (cerdas y silicona)\nCepillo de silicona especial mascotas\nCepillo Jalisco\nDepósito mixto (sólidos y líquidos)\nDepósito de sólidos con ciclón\nMando a distancia\n2 mopas\n2 cepillos laterales\n1 filtro de alta eficiencia\nCepillo de autolimpieza\nBase de carga y adaptador de corriente\nManual de instrucciones\nManual de la aplicación",
   },
   {
     "id": "2",
@@ -13,7 +18,13 @@
     "price": "148,00",
     "oldPrice": "315,00",
     "discount": "53",
-    "imageUri": "https://www.storececotec.com/7073-home_default/conga-990-vital.jpg"
+    "shortDescription": "Robot aspirador con mapeo láser",
+    "stock": 0,
+    "imageUri": "https://www.storececotec.com/7073-home_default/conga-990-vital.jpg",
+    "description": "Robot aspirador de Cecotec con tecnología láser, friega, aspira y barre a la vez. Máxima potencia con tecnología Cy-Clean. 10.000 Pa. Cepillo patentado Jalisco. Room Plan. APP. Cepillo especial mascotas. Compatible 5 GHz. Mando a distancia.",
+    "description2": "Robot aspirador con mapeo láser profesional 4 en 1: barre, aspira, pasa la mopa y friega el suelo de forma simultánea gracias a su tanque mixto para sólidos y líquidos. Limpia la totalidad de la superficie recorrida de forma eficiente, ordenada e inteligente con Wi-Fi y App.\nTecnología ciclónica: Los mayores avances en aspiración aplicados para aumentar la potencia de succión, alargando la vida útil.\n10.000 Pa: La mayor potencia de succión jamás vista.\nGracias al innovador sistema Room Plan podrás gestionar hasta 50 planes de limpieza, seleccionando las estancias y habitaciones de tus  viviendas, para poder limpiar el espacio seleccionado cuando tú lo desees.",
+    "composition": "Robot aspirador\nCepillo multifunción (cerdas y silicona)\nCepillo de silicona especial mascotas\nCepillo Jalisco\nDepósito mixto (sólidos y líquidos)\nDepósito de sólidos con ciclón\nMando a distancia\n2 mopas\n2 cepillos laterales\n1 filtro de alta eficiencia\nCepillo de autolimpieza\nBase de carga y adaptador de corriente\nManual de instrucciones\nManual de la aplicación",
+  
   },
   {
     "id": "3",
@@ -21,6 +32,12 @@
     "price": "289,00",
     "oldPrice": "481,67",
     "discount": "40",
-    "imageUri": "https://www.storececotec.com/9627-home_default/conga-1090-windroid-870-connected.jpg"
+    "shortDescription": "Robot aspirador con mapeo láser",
+    "stock": 97,
+    "imageUri": "https://www.storececotec.com/9627-home_default/conga-1090-windroid-870-connected.jpg",
+    "description": "Robot aspirador de Cecotec con tecnología láser, friega, aspira y barre a la vez. Máxima potencia con tecnología Cy-Clean. 10.000 Pa. Cepillo patentado Jalisco. Room Plan. APP. Cepillo especial mascotas. Compatible 5 GHz. Mando a distancia.",
+    "description2": "Robot aspirador con mapeo láser profesional 4 en 1: barre, aspira, pasa la mopa y friega el suelo de forma simultánea gracias a su tanque mixto para sólidos y líquidos. Limpia la totalidad de la superficie recorrida de forma eficiente, ordenada e inteligente con Wi-Fi y App.\nTecnología ciclónica: Los mayores avances en aspiración aplicados para aumentar la potencia de succión, alargando la vida útil.\n10.000 Pa: La mayor potencia de succión jamás vista.\nGracias al innovador sistema Room Plan podrás gestionar hasta 50 planes de limpieza, seleccionando las estancias y habitaciones de tus  viviendas, para poder limpiar el espacio seleccionado cuando tú lo desees.",
+    "composition": "Robot aspirador\nCepillo multifunción (cerdas y silicona)\nCepillo de silicona especial mascotas\nCepillo Jalisco\nDepósito mixto (sólidos y líquidos)\nDepósito de sólidos con ciclón\nMando a distancia\n2 mopas\n2 cepillos laterales\n1 filtro de alta eficiencia\nCepillo de autolimpieza\nBase de carga y adaptador de corriente\nManual de instrucciones\nManual de la aplicación",
+  
   }
 ]

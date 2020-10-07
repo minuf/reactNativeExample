@@ -3,9 +3,7 @@ import {StyleSheet, Text, TouchableOpacity, Image, View} from 'react-native';
 
 const Item = (props) => {
   return (
-    <TouchableOpacity
-      onPress={props.onPress}
-      style={[styles.item, props.style]}>
+    <TouchableOpacity onPress={props.onPress} style={[styles.item]}>
       <View style={styles.container}>
         <Text style={styles.title}>{props.item.title}</Text>
         <Image
@@ -14,12 +12,14 @@ const Item = (props) => {
             uri: props.item.imageUri,
           }}
         />
+        {props.item.stock < 1 && <Text style={styles.noStockTag}>AGOTADO</Text>}
+
         <Text style={styles.price}>
           {props.item.price} {'\u20AC'}
         </Text>
         <View style={styles.discountContainer}>
           <Text style={styles.oldPrice}>{props.item.oldPrice}</Text>
-          <Text style={styles.discount}>  {props.item.discount}%</Text>
+          <Text style={styles.discount}> {props.item.discount}%</Text>
         </View>
       </View>
     </TouchableOpacity>
@@ -32,7 +32,13 @@ const styles = StyleSheet.create({
     // marginTop: StatusBar.currentHeight || 0,
     alignItems: 'center',
     borderWidth: 0.5,
+    borderColor: 'grey',
     padding: 50,
+  },
+  noStockTag: {
+    fontSize: 22,
+    color: 'red',
+    alignSelf: 'center',
   },
   item: {
     // padding: 20,
@@ -48,11 +54,7 @@ const styles = StyleSheet.create({
     flex: 1,
     width: 200,
     height: 200,
-  },
-  text: {
-    color: 'grey',
-    fontSize: 30,
-    fontWeight: 'bold',
+    resizeMode: 'contain',
   },
   price: {
     color: '#666',

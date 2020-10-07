@@ -1,13 +1,14 @@
 import React from 'react';
 import {FlatList, SafeAreaView, StyleSheet} from 'react-native';
 
-const MList = ({data, renderItem}) => {
+const MList = ({data, renderItem, horizontal = false}) => {
   return (
     <SafeAreaView style={styles.container}>
       <FlatList
         data={data}
         renderItem={renderItem}
         keyExtractor={(item) => item.id}
+        horizontal={horizontal}
       />
     </SafeAreaView>
   );

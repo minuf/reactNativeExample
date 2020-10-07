@@ -5,25 +5,21 @@ import MList from '../components/MFlatList';
 import Item from '../components/ProductItem';
 
 const ProductList = ({navigation}) => {
-  const [selectedId, setSelectedId] = useState(null);
   const [isLoading, setLoading] = useState(true);
-  const [data, setData] = useState([]);
 
   const DATA = require('../mock/mockedProducts.json');
 
   const renderItem = ({item}) => {
-    const backgroundColor = item.id === selectedId ? '#6e3b6e' : 'white';
-
     return (
       <Item
         item={item}
         onPress={() => navigation.navigate('ProductDetail', {item: item})}
-        style={{backgroundColor}}
       />
     );
   };
 
   useEffect(() => {
+    // Mock some data load time. 1seg
     if (DATA != null) {
       setTimeout(() => {
         setLoading(false);
@@ -34,7 +30,7 @@ const ProductList = ({navigation}) => {
   return (
     <>
       {isLoading ? (
-        <ActivityIndicator size="small" color="#0000ff" />
+        <ActivityIndicator size="large" color="#0000ff" />
       ) : (
         <AppContainer>
           <MList data={DATA} renderItem={renderItem} />

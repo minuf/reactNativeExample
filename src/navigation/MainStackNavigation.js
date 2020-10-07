@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Button, Text, Image} from 'react-native';
+import {View, Image} from 'react-native';
 import ProductList from '../screens/ProductList';
 import ProductDetail from '../screens/ProductDetail';
 import {createStackNavigator} from '@react-navigation/stack';
@@ -10,12 +10,11 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 function LogoTitle() {
   return (
     <Image
-      style={{width: 250, height: 50}}
+      style={{width: 240, height: 40, alignSelf: 'center'}}
       source={require('../assets/logo_cecotec.png')}
     />
   );
 }
-const Drawer = createDrawerNavigator();
 
 export const Stack = createStackNavigator();
 
@@ -48,17 +47,15 @@ export function MainStackNavigation() {
             fontWeight: 'bold',
           },
           headerRight: () => (
-            <Button
-              onPress={() => alert('This is a button!')}
-              title="Info"
-              color="#fff"
-            />
+            <View style={{width: 50, height: 50, alignSelf: 'center'}} />
           ),
         }}
       />
     </Stack.Navigator>
   );
 }
+
+// const Drawer = createDrawerNavigator();
 
 // export function MainStackNavigation() {
 //   return (
