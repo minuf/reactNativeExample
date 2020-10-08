@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import {
   Text,
   StyleSheet,
-  Button,
   SafeAreaView,
   ScrollView,
   ImageBackground,

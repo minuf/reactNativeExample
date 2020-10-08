@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {Button, ActivityIndicator} from 'react-native';
+import {ActivityIndicator} from 'react-native';
 import AppContainer from '../containers/AppContainer';
 import MList from '../components/MFlatList';
 import Item from '../components/ProductItem';
