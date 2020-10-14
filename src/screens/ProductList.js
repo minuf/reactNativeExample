@@ -4,8 +4,13 @@ import AppContainer from '../containers/AppContainer';
 import MList from '../components/MFlatList';
 import Item from '../components/ProductItem';
 
+import { useDispatch, useSelector } from 'react-redux';
+import { productActions } from '../_actions';
+
 const ProductList = ({navigation}) => {
-  const [isLoading, setLoading] = useState(true);
+
+  const products = useSelector(state => state.products);
+  const dispatch = useDispatch();
 
   const DATA = require('../mock/mockedProducts.json');
 
@@ -19,21 +24,16 @@ const ProductList = ({navigation}) => {
   };
 
   useEffect(() => {
-    // Mock some data load time. 1seg
-    if (DATA != null) {
-      setTimeout(() => {
-        setLoading(false);
-      }, 1000);
-    }
-  }, [DATA]);
+    dispatch(productActions.getAll());
+  }, []);
 
   return (
     <>
-      {isLoading ? (
+      {!products.items ? (
         <ActivityIndicator size="large" color="#0000ff" />
       ) : (
         <AppContainer>
-          <MList data={DATA} renderItem={renderItem} />
+          <MList data={products.items} renderItem={renderItem} />
         </AppContainer>
       )}
     </>
