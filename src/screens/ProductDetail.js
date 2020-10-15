@@ -16,9 +16,14 @@ import {
   faCheckCircle,
 } from '@fortawesome/free-solid-svg-icons';
 
+import { cartActions } from '../_actions';
+
+import { useDispatch, useSelector } from 'react-redux';
+
 //TODO: Refactor and extract Card to new componentt
 const ProductDetail = ({route, navigation}) => {
   const [selectedTab, setSelectedTab] = useState(1);
+  const dispatch = useDispatch();
 
   const {item} = route.params;
   const image = {uri: item.imageUri};
@@ -32,6 +37,10 @@ const ProductDetail = ({route, navigation}) => {
   function OnPress(selected) {
     setSelectedTab(selected);
     // alert('hello' + selected);
+  }
+
+  function addToCart(product) {
+    dispatch(cartActions.addProduct(product));
   }
 
   return (
@@ -118,7 +127,10 @@ const ProductDetail = ({route, navigation}) => {
           <TouchableHighlight
             disabled={item.stock < 1}
             style={styles.price}
-            onPress={() => alert('Añadido al carrito!')}
+            onPress={() => {
+              addToCart(item);
+              alert('Añadido al carrito!');
+            }}
             underlayColor="white">
             <View>
               <Text style={styles.buyButton}>

@@ -2,6 +2,7 @@ import * as React from 'react';
 import {View, Image} from 'react-native';
 import ProductList from '../screens/ProductList';
 import ProductDetail from '../screens/ProductDetail';
+import HeaderCart from '../components/HeaderCart';
 import {createStackNavigator} from '@react-navigation/stack';
 import {HeaderBackButton} from '@react-navigation/stack';
 
@@ -31,6 +32,12 @@ export function MainStackNavigation() {
           headerStyle: {
             backgroundColor: 'grey',
           },
+          headerLeft: () => (
+            <HeaderCart empty="true"/>
+          ),
+          headerRight: () => (
+            <HeaderCart />
+          ),
         })}
       />
       <Stack.Screen
@@ -47,7 +54,7 @@ export function MainStackNavigation() {
             fontWeight: 'bold',
           },
           headerRight: () => (
-            <View style={{width: 50, height: 50, alignSelf: 'center'}} />
+            <HeaderCart />
           ),
         }}
       />
