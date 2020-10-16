@@ -20,6 +20,8 @@ import { cartActions } from '../_actions';
 
 import { useDispatch, useSelector } from 'react-redux';
 
+import ToastExample from '../_nativeModules/ToastExample';
+
 //TODO: Refactor and extract Card to new componentt
 const ProductDetail = ({route, navigation}) => {
   const [selectedTab, setSelectedTab] = useState(1);
@@ -41,6 +43,8 @@ const ProductDetail = ({route, navigation}) => {
 
   function addToCart(product) {
     dispatch(cartActions.addProduct(product));
+    // alert('Añadido al carrito!');
+    ToastExample.show('Product added', ToastExample.SHORT);
   }
 
   return (
@@ -129,7 +133,6 @@ const ProductDetail = ({route, navigation}) => {
             style={styles.price}
             onPress={() => {
               addToCart(item);
-              alert('Añadido al carrito!');
             }}
             underlayColor="white">
             <View>
