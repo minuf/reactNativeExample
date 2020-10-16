@@ -6,6 +6,7 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { useDispatch, useSelector } from 'react-redux';
 import { cartActions } from '../../_actions';
 
+import DialogExample from '../../_nativeModules/DialogExample';
 
 const HeaderCart = ({empty = false}) => {
 
@@ -13,7 +14,9 @@ const HeaderCart = ({empty = false}) => {
 
     function onPress() {
         if (products.items && products.items.length > 0) {
-            alert("cart: " + products.items.length);
+            // alert("cart: " + products.items.length);
+            DialogExample.show('Cart: ' + products.items.length);
+
         }
     }
 

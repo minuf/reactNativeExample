@@ -1,6 +1,6 @@
 // ToastModule.java
 
-package com.cecotectest;
+package com.cecotectest.customToastExample;
 
 import android.widget.Toast;
 

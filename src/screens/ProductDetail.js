@@ -21,6 +21,7 @@ import { cartActions } from '../_actions';
 import { useDispatch, useSelector } from 'react-redux';
 
 import ToastExample from '../_nativeModules/ToastExample';
+import DialogExample from '../_nativeModules/DialogExample';
 
 //TODO: Refactor and extract Card to new componentt
 const ProductDetail = ({route, navigation}) => {
@@ -44,7 +45,18 @@ const ProductDetail = ({route, navigation}) => {
   function addToCart(product) {
     dispatch(cartActions.addProduct(product));
     // alert('Añadido al carrito!');
-    ToastExample.show('Product added', ToastExample.SHORT);
+    // ToastExample.show('Product added', ToastExample.SHORT);
+    const dialogResult = async () => {
+      try {
+        var result = await DialogExample.show('Product added');
+        console.log("RESULT -- " + result.result);
+        ToastExample.show(result.result, ToastExample.SHORT);
+      } catch(e) {
+        console.error(e);
+      }
+    }
+    dialogResult();
+    
   }
 
   return (

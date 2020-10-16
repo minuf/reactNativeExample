@@ -1,6 +1,6 @@
 // CustomToastPackage.java
 
-package com.cecotectest;
+package com.cecotectest.customToastExample;
 
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.NativeModule;

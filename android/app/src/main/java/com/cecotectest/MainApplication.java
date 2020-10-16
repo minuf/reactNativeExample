@@ -2,6 +2,8 @@ package com.cecotectest;
 
 import android.app.Application;
 import android.content.Context;
+
+import com.cecotectest.customDialogExample.CustomDialogPackage;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
 import com.facebook.react.ReactInstanceManager;
@@ -11,7 +13,7 @@ import com.facebook.soloader.SoLoader;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
-import com.cecotectest.CustomToastPackage;
+import com.cecotectest.customToastExample.CustomToastPackage;
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -29,6 +31,7 @@ public class MainApplication extends Application implements ReactApplication {
           // Packages that cannot be autolinked yet can be added manually here, for example:
           // packages.add(new MyReactNativePackage());
           packages.add(new CustomToastPackage()); // <-- Add this line with your package name.
+          packages.add(new CustomDialogPackage()); // <-- Add this line with your package name.
           return packages;
         }
 
