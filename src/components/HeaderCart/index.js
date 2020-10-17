@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+import {View, Text, TouchableOpacity, StyleSheet, Platform} from 'react-native';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
@@ -15,7 +15,9 @@ const HeaderCart = ({empty = false}) => {
     function onPress() {
         if (products.items && products.items.length > 0) {
             // alert("cart: " + products.items.length);
-            DialogExample.show('Cart: ' + products.items.length);
+            if (Platform.OS === 'android') 
+                DialogExample.show('Cart: ' + products.items.length);
+            else alert("Cart: " + products.items.length);
 
         }
     }

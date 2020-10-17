@@ -7,6 +7,7 @@ import {
   ImageBackground,
   View,
   TouchableHighlight,
+  Platform,
 } from 'react-native';
 import AppContainer from '../containers/AppContainer';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
@@ -44,8 +45,7 @@ const ProductDetail = ({route, navigation}) => {
 
   function addToCart(product) {
     dispatch(cartActions.addProduct(product));
-    // alert('Añadido al carrito!');
-    // ToastExample.show('Product added', ToastExample.SHORT);
+
     const dialogResult = async () => {
       try {
         var result = await DialogExample.show('Product added');
@@ -55,8 +55,11 @@ const ProductDetail = ({route, navigation}) => {
         console.error(e);
       }
     }
-    dialogResult();
-    
+    if (Platform.OS === 'android') {
+      dialogResult();
+    } else {
+      alert('Product added')
+    }
   }
 
   return (
