@@ -3,6 +3,8 @@ package com.cecotectest;
 import android.app.Application;
 import android.content.Context;
 
+import androidx.multidex.MultiDex;
+
 import com.cecotectest.customDialogExample.CustomDialogPackage;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
@@ -52,6 +54,12 @@ public class MainApplication extends Application implements ReactApplication {
     SoLoader.init(this, /* native exopackage */ false);
     initializeFlipper(this, getReactNativeHost().getReactInstanceManager());
   }
+
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(this);
+    }
 
   /**
    * Loads Flipper in React Native templates. Call this in the onCreate method with something like

@@ -19,7 +19,7 @@ import {
 
 import { cartActions } from '../_actions';
 
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 import ToastExample from '../_nativeModules/ToastExample';
 import DialogExample from '../_nativeModules/DialogExample';
@@ -48,9 +48,9 @@ const ProductDetail = ({route, navigation}) => {
 
     const dialogResult = async () => {
       try {
-        var result = await DialogExample.show('Product added');
-        console.log("RESULT -- " + result.result);
-        ToastExample.show(result.result, ToastExample.SHORT);
+        var resultData = await DialogExample.show('Product added');
+        console.log("RESULT -- " + resultData.result);
+        ToastExample.show(resultData.result, ToastExample.SHORT);
       } catch(e) {
         console.error(e);
       }
